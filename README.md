@@ -39,8 +39,8 @@ cd /home/netcon/.aws/credentials
 add the below lines:
 
 [terraform]
-aws_access_key_id = 
-aws_secret_access_key = 
+aws_access_key_id = <access>
+aws_secret_access_key = <secret>
 
 Create profile in providers block:
 
