@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "example" {
 }
 ######################################################################################################
 
-Hard coded credentials in provider block:
+#Hard coded credentials in provider block:
 
 provider "aws" {
   region     = "us-west-2"
@@ -26,23 +26,23 @@ provider "aws" {
 }
 
 
-Hard-coded credentials are not recommended in any Terraform configuration and risks secret leakage should this file ever be committed to a public version control system.
+#Hard-coded credentials are not recommended in any Terraform configuration and risks secret leakage should this file ever be committed to a public version #control system.
 
 
-Other settings related to authorization can be configured, such as:
-    • profile
-    • shared_config_files
-    • shared_credentials_files
+#Other settings related to authorization can be configured, such as:
+    #• profile
+    #• shared_config_files
+    #• shared_credentials_files
 
-cd /home/netcon/.aws/credentials
+cd /home/<user-name>/.aws/credentials
 
-add the below lines:
+#add the below lines:
 
 [terraform]
 aws_access_key_id = <access>
 aws_secret_access_key = <secret>
 
-Create profile in providers block:
+#Create profile in providers block:
 
 provider "aws" {
    region     = "ap-south-1"
